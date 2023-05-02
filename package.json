@@ -1,0 +1,36 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "UI automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn clean-data && cypress run --project tests --headless --browser chrome",
+    "combine-reports": "yarn mochawesome-merge tests/cypress/reports/mocha/*.json -o tests/cypress/reports/mochareports/report.json",
+    "generate-report": "marge tests/cypress/reports/mochareports/report.json -f report -o tests/cypress/reports/mochareports",
+    "clean:reports": "mkdir -p tests/cypress/reports && rm -R -f tests/cypress/reports/* && mkdir tests/cypress/reports/mocha && mkdir tests/cypress/reports/mochareports",
+    "auto-test": "yarn clean-data && cypress run --project tests --headless --browser $BROWSER ",
+    "start": "cypress open",
+    "start-clean": "yarn clean-data && start",
+    "clean-data": "node tests/cypress/common/preRunScript.js && yarn clean:reports"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
+  },
+  "dependencies": {
+    "cypress": "^7.5.0",
+    "cypress-localstorage-commands": "^1.5.0",
+    "cypress-log-to-output": "^1.1.2",
+    "husky": "^6.0.0",
+    "mocha": "^6.2.3",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

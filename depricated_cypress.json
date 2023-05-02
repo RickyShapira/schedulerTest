@@ -1,0 +1,23 @@
+{
+  "viewportWidth": 1880,
+  "viewportHeight": 1020,
+  "numTestsKeptInMemory": 10,
+  "integrationFolder": "tests/cypress/integration/",
+  "pluginsFile": "tests/cypress/plugins/index.js",
+  "taskTimeout": 200000,
+  "pageLoadTimeout": 300000,
+  "projectId": "bc6ce308-5085-4202-8507-f5902bd8c98f",
+  "video": false,
+  "videoUploadOnPasses": false,
+  "screenshotOnRunFailure": true,
+  "defaultCommandTimeout": 60000,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "reportFilename": "TEST",
+    "overwrite": false,
+    "html": true,
+    "json": false,
+    "timestamp": "mmddyyyy_HHMMss"
+  }
+}
