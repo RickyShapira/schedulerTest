@@ -2,6 +2,7 @@
 - git clone https://github.com/RickyShapira/schedulerTest/tree/schudeletTest
 - yarn
 - yarn install
+- checkout to schudeletTest brunch
 ## Run Cypress:
 - Open terminal
 - Navigate to ```tests``` folder (`cd /Test/tests`)
