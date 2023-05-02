@@ -12,6 +12,7 @@
 The tests are checked :
 1. GET /pet/{petId}
 2. POST /pet
+
 https://petstore.swagger.io/#/
 
 
